@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aisana Zhumagali — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Aisana Zhumagali, IT Management student at KBTU">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#about">Aisana<span>.</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="sr-only">Open menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-text">
+          <p class="eyebrow">Hi, I'm</p>
+          <h1>Aisana Zhumagali</h1>
+          <p class="lead">
+            I'm a 3rd-year IT Management student at KBTU and I work at Sulpak,
+            where I deal with data and reporting every day.
+          </p>
+          <p>
+            In the IWaMAD course I'm learning web development so I can connect data analysis
+            with interfaces people actually enjoy using. I like clean layouts, clear colours
+            and pages that work just as well on a phone as on a laptop.
+          </p>
+          <ul class="skills" aria-label="Skills">
+            <li>Excel</li>
+            <li>Data Analysis</li>
+            <li>Reporting</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+          </ul>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+
+        <div class="about-photo">
+          <img src="photo.jpg" alt="Portrait of Aisana Zhumagali" width="320" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-intro">Things I built during the IWaMAD course.</p>
+
+        <div class="projects-grid">
+          <article class="card">
+            <p class="card-tag">Week 3 · React + TypeScript</p>
+            <h3>Profile Card</h3>
+            <p>
+              My first React app: a profile card with my photo, bio, skill badges and links.
+              I split it into typed components (Header, ProfileCard, SkillBadge, LinkItem, Footer)
+              and added a like button with useState.
+            </p>
+            <a class="card-link" href="https://github.com/Aisana00/iwamad-practice/tree/week-03">View repository →</a>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Week 4 · Routing &amp; testing</p>
+            <h3>Multi-page Profile</h3>
+            <p>
+              I turned the card into a site with Home, Skills, Contact and a custom 404 page using
+              React Router. A shared LikesContext keeps the like count between pages, and a
+              Vitest test checks the like button. Deployed on GitHub Pages.
+            </p>
+            <a class="card-link" href="https://github.com/Aisana00/iwamad-practice/tree/week-04">View repository →</a>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Week 5 · Design system</p>
+            <h3>From Design to Design System</h3>
+            <p>
+              I moved my design from Figma into code as design tokens (colours, spacing, radius)
+              and reusable UI components. I also fixed a contrast problem: muted text went
+              from 2.54:1 to 4.83:1.
+            </p>
+            <a class="card-link" href="https://github.com/Aisana00/iwamad-practice/tree/week-05">View repository →</a>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Live demo</p>
+            <h3>Practice site on GitHub Pages</h3>
+            <p>
+              The latest version of my practice project, published with GitHub Pages so it can
+              be opened on any device.
+            </p>
+            <a class="card-link" href="https://aisana00.github.io/iwamad-practice/">Open live site →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <h2>Contact</h2>
+        <p class="section-intro">Have a question or an idea? Write to me.</p>
+
+        <form id="contactForm" class="form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+            <p class="error" id="name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+            <p class="error" id="email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+            <p class="error" id="message-error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn">Send message</button>
+          <p class="success" id="formSuccess" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Aisana Zhumagali. Built with HTML, CSS and JavaScript.</p>
+      <p><a href="mailto:ai_zhumagali@kbtu.kz">ai_zhumagali@kbtu.kz</a> · <a href="https://github.com/Aisana00">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
